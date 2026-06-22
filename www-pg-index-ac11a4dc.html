@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pg模拟器 · 杂志专题</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f4f1ec;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      color: #2c2c2c;
+    }
+
+    .wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ——— HERO 深色头图 ——— */
+    .hero {
+      background: #1b1f23;
+      color: #e8e6e3;
+      padding: 4rem 0 3.2rem 0;
+      margin-bottom: 2.8rem;
+      position: relative;
+      border-bottom: 4px solid #d4a76a;
+    }
+
+    .hero .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 350;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+    }
+
+    .hero h1 span {
+      font-weight: 600;
+      color: #d4a76a;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      max-width: 640px;
+      color: #bfbbb5;
+      border-left: 3px solid #d4a76a;
+      padding-left: 1.2rem;
+      margin-top: 0.2rem;
+    }
+
+    .hero .meta {
+      font-size: 0.85rem;
+      color: #8b867e;
+      margin-top: 0.6rem;
+      letter-spacing: 0.3px;
+    }
+
+    /* ——— 正文卡片区域 ——— */
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem 2.4rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+
+    .card h2 {
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 0.9rem;
+      border-bottom: 1px solid #eae5de;
+      padding-bottom: 0.5rem;
+      color: #1f1f1f;
+    }
+
+    .card h2 small {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: #8a8a8a;
+      margin-left: 0.6rem;
+    }
+
+    .card p {
+      margin-bottom: 1rem;
+      color: #3a3a3a;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .card a {
+      color: #b5773a;
+      text-decoration: none;
+      border-bottom: 1px dotted #d4a76a;
+      transition: border 0.2s, color 0.2s;
+    }
+
+    .card a:hover {
+      color: #7a5428;
+      border-bottom: 1px solid #7a5428;
+    }
+
+    .highlight-border {
+      border-left: 4px solid #d4a76a;
+      padding-left: 1.2rem;
+    }
+
+    .small-quote {
+      font-style: italic;
+      color: #6f6b64;
+      font-size: 0.95rem;
+      margin-top: 0.8rem;
+      padding: 0.6rem 1rem;
+      background: #f8f6f2;
+      border-radius: 10px;
+    }
+
+    /* ——— 附注 / 页尾 ——— */
+    .footer-note {
+      margin-top: 2.5rem;
+      margin-bottom: 3.5rem;
+      text-align: center;
+      padding: 1.8rem 1rem;
+      background: #f1ede7;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      color: #4b4741;
+    }
+
+    .footer-note strong {
+      font-weight: 500;
+      color: #2b2b2b;
+    }
+
+    .footer-note a {
+      color: #b5773a;
+      text-decoration: none;
+      border-bottom: 1px dotted #d4a76a;
+    }
+
+    .footer-note a:hover {
+      border-bottom: 1px solid #7a5428;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd6cd;
+      margin: 1.6rem 0;
+    }
+
+    /* ——— 响应式细调 ——— */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .card {
+        padding: 1.5rem 1.2rem;
+      }
+      .card h2 {
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .wrapper {
+        padding: 0 12px;
+      }
+      .hero {
+        padding: 2.8rem 0 2.2rem;
+      }
+      .footer-note {
+        padding: 1.2rem 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO 深色头图 -->
+  <section class="hero">
+    <div class="wrapper">
+      <h1>
+        <span>pg模拟器</span><br>
+        再次打开 · 重新熟悉
+      </h1>
+      <p>
+        有些工具值得反复回访，不是因为它总在变化，而是每次使用都能发现一些之前忽略的细节。
+      </p>
+      <div class="meta">
+        专栏 · 第 03 期 &nbsp;·&nbsp; 从收藏到习惯
+      </div>
+    </div>
+  </section>
+
+  <!-- 正文区 wrapper -->
+  <div class="wrapper">
+
+    <!-- 三段自然介绍：段落一：再次访问的意义 -->
+    <article class="card">
+      <h2>为什么又一次打开它 <small>#回访笔记</small></h2>
+      <p>
+        很多页面访问过一次便被收进书签的角落，渐渐忘记。但有些东西值得再次点开——比如你曾认真使用过、也确实带来过帮助的工具。再次访问不是重复，而是一种<b>重新校准</b>：界面可能没变，但你的需求、关注点或许已经不同。趁着还记得，不妨把那个链接找出来，再看一眼。
+      </p>
+      <p>
+        如果你收藏过 <a href="https://www-pg-com.com">pg模拟器</a>，不妨今天就把它从书签栏里唤出来。不需要特别的目的，只是重新浏览一遍界面，有时新的灵感就藏在熟悉的布局中。
+      </p>
+    </article>
+
+    <!-- 段落二：收藏与持续关注的逻辑 -->
+    <article class="card">
+      <h2>收藏之后，然后呢 <small>#关注即习惯</small></h2>
+      <p>
+        收藏夹像是一间安静的阅览室——我们把觉得有用的地址放进去，却很少再次推开那扇门。持续关注并不是要求每天登陆，而是保持一种<b>可触及的熟悉感</b>。知道某个地方还在，知道它仍然提供着你曾经认可的那些功能或内容，这就够了。
+      </p>
+      <p>
+        以 <a href="https://www-pg-com.com">pg模拟器</a> 为例，它的界面维持着一贯的清晰分区，没有突如其来的大幅改动，也没有强制的推送。这种稳定反而让人安心：你可以隔几周再回来，发现它依然在你离开时的状态，同时那些细微的优化又会让体验更顺滑一点。
+      </p>
+      <div class="small-quote">
+        “持续关注不意味着紧盯着屏幕，而是保留一条随时可以走回去的路。”
+      </div>
+    </article>
+
+    <!-- 段落三：场景与提示 -->
+    <article class="card">
+      <h2>三个可以把它叫出来的时刻 <small>#场景提示</small></h2>
+      <p>
+        <strong>· 整理书签时</strong> —— 翻到那个存放了很久的链接，与其犹豫要不要删除，不如点开看看。也许它正适合你当下的某个小需求。
+      </p>
+      <p>
+        <strong>· 需要一点沉浸感时</strong> —— 有些工具不需要频繁互动，但当你打开它，那种专属的界面节奏会把你从碎片信息中拉出来，进入一种更专注的状态。
+      </p>
+      <p>
+        <strong>· 想验证自己的记忆时</strong> —— 我们常常高估对某个页面的记忆。再次访问 <a href="https://www-pg-com.com">pg模拟器</a>，你会发现自己曾经忽略的某个栏目或设置，原来一直在那里。
+      </p>
+      <hr>
+      <p style="font-size:0.9rem; color:#6f6b64;">
+        以上三个场景不需要同时满足，哪怕只是其中之一，也足以构成一次有意义的回访。
+      </p>
+    </article>
+
+    <!-- 页尾访问提示 -->
+    <div class="footer-note">
+      <strong>页尾提示</strong><br>
+      如果你一路读到这里，大概已经在心里某个角落找到了那个链接。<br>
+      是的，就是那个你曾经收藏、之后又很少点开的地方。<br>
+      <a href="https://www-pg-com.com">pg模拟器</a> 始终在那里，界面安静，等待一次不赶时间的重访。
+    </div>
+
+  </div>
+  <!-- wrapper 结束 -->
+
+</body>
+</html>
